@@ -16,4 +16,7 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
       default_workflow_permissions: "write",
     },
   },
+  _repositories+:: [
+    orgs.newRepo('.github')
+  ],
 }
