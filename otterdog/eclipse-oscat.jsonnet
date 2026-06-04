@@ -17,6 +17,22 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
     },
   },
   _repositories+:: [
-    orgs.newRepo('.github')
+    orgs.newRepo('.github'),
+    orgs.newRepo('oscat-docs') {
+      description: "OSCAT Landing Page and Main Documentation (ReadTheDocs)",
+      homepage: "https://oscat.readthedocs.io",
+    },
+    orgs.newRepo('oscat-basic-docs') {
+      description: "OSCAT Basic Library Documentation (ReadTheDocs)",
+      homepage: "https://oscat-basic.readthedocs.io",
+    },
+    orgs.newRepo('oscat-network-docs') {
+      description: "OSCAT Network Library Documentation (ReadTheDocs)",
+      homepage: "https://oscat-network.readthedocs.io",
+    },
+    orgs.newRepo('oscat-building-docs') {
+      description: "OSCAT Building Library Documentation (ReadTheDocs)",
+      homepage: "https://oscat-building.readthedocs.io",
+    },
   ],
 }
