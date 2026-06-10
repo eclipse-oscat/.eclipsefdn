@@ -21,18 +21,30 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
     orgs.newRepo('oscat-docs') {
       description: "OSCAT Landing Page and Main Documentation (ReadTheDocs)",
       homepage: "https://oscat.readthedocs.io",
+      environments: [
+        orgs.newEnvironment('copilot'),
+      ],
     },
     orgs.newRepo('oscat-basic-docs') {
       description: "OSCAT Basic Library Documentation (ReadTheDocs)",
       homepage: "https://oscat-basic.readthedocs.io",
+      environments: [
+        orgs.newEnvironment('copilot'),
+      ],
     },
     orgs.newRepo('oscat-network-docs') {
       description: "OSCAT Network Library Documentation (ReadTheDocs)",
       homepage: "https://oscat-network.readthedocs.io",
+      environments: [
+        orgs.newEnvironment('copilot'),
+      ],
     },
     orgs.newRepo('oscat-building-docs') {
       description: "OSCAT Building Library Documentation (ReadTheDocs)",
       homepage: "https://oscat-building.readthedocs.io",
+      environments: [
+        orgs.newEnvironment('copilot'),
+      ],
     },
   ],
 }
