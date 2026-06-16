@@ -21,8 +21,15 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
     orgs.newRepo('oscat-docs') {
       description: "OSCAT Landing Page and Main Documentation (ReadTheDocs)",
       homepage: "https://oscat.readthedocs.io",
+      gh_pages_build_type: "workflow",
       environments: [
         orgs.newEnvironment('copilot'),
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
       ],
       webhooks: [
         orgs.newRepoWebhook('https://app.readthedocs.org/api/v2/webhook/oscat/327900/') {
@@ -38,8 +45,15 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
     orgs.newRepo('oscat-basic-docs') {
       description: "OSCAT Basic Library Documentation (ReadTheDocs)",
       homepage: "https://oscat-basic.readthedocs.io",
+      gh_pages_build_type: "workflow",
       environments: [
         orgs.newEnvironment('copilot'),
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
       ],
       webhooks: [
         orgs.newRepoWebhook('https://app.readthedocs.org/api/v2/webhook/oscat-basic/327898/') {
@@ -55,8 +69,15 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
     orgs.newRepo('oscat-network-docs') {
       description: "OSCAT Network Library Documentation (ReadTheDocs)",
       homepage: "https://oscat-network.readthedocs.io",
+      gh_pages_build_type: "workflow",
       environments: [
         orgs.newEnvironment('copilot'),
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
       ],
       webhooks: [
         orgs.newRepoWebhook('https://app.readthedocs.org/api/v2/webhook/oscat-network/327905/') {
@@ -72,8 +93,15 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
     orgs.newRepo('oscat-building-docs') {
       description: "OSCAT Building Library Documentation (ReadTheDocs)",
       homepage: "https://oscat-building.readthedocs.io",
+      gh_pages_build_type: "workflow",
       environments: [
         orgs.newEnvironment('copilot'),
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
       ],
       webhooks: [
         orgs.newRepoWebhook('https://app.readthedocs.org/api/v2/webhook/oscat-building/327902/') {
