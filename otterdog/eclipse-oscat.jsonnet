@@ -18,6 +18,7 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
   },
   _repositories+:: [
     orgs.newRepo('.github'),
+    orgs.newRepo('oscat-website'),
     orgs.newRepo('oscat-docs') {
       description: "OSCAT Landing Page and Main Documentation (ReadTheDocs)",
       homepage: "https://oscat.readthedocs.io",
