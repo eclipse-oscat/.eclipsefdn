@@ -17,7 +17,11 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
     },
   },
   _repositories+:: [
-    orgs.newRepo('.github'),
+    orgs.newRepo('.github') {
+      environments: [
+        orgs.newEnvironment('copilot'),
+      ],
+    },
     orgs.newRepo('oscat-website') {
       environments: [
         orgs.newEnvironment('copilot'),
