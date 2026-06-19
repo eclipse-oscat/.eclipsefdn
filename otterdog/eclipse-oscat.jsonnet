@@ -124,6 +124,7 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
       ],
     },
     orgs.newRepo('oscat-libs-archive') {
+      archived: true,
       environments: [
         orgs.newEnvironment('copilot'),
       ],
