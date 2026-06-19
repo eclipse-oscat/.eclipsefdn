@@ -17,9 +17,21 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
     },
   },
   _repositories+:: [
-    orgs.newRepo('.github'),
-    orgs.newRepo('oscat-libs-archive'),
-    orgs.newRepo('oscat-website'),
+    orgs.newRepo('.github') {
+      environments: [
+        orgs.newEnvironment('copilot'),
+      ],
+    },
+    orgs.newRepo('oscat-libs-archive') {
+      environments: [
+        orgs.newEnvironment('copilot'),
+      ],
+    },
+    orgs.newRepo('oscat-website') {
+      environments: [
+        orgs.newEnvironment('copilot'),
+      ],
+    },
     orgs.newRepo('oscat-docs') {
       description: "OSCAT Landing Page and Main Documentation (ReadTheDocs)",
       homepage: "https://oscat.readthedocs.io",
@@ -36,10 +48,12 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
       webhooks: [
         orgs.newRepoWebhook('https://app.readthedocs.org/api/v2/webhook/oscat/327900/') {
           content_type: "json",
+          events: ["push"],
           secret: "pass:bots/iot.oscat/readthedocs.org/oscat-webhook-secret",
         },
         orgs.newRepoWebhook('https://app.readthedocs.org/api/v2/webhook/oscat-en/327901/') {
           content_type: "json",
+          events: ["push"],
           secret: "pass:bots/iot.oscat/readthedocs.org/oscat-en-webhook-secret",
         },
       ],
@@ -60,10 +74,12 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
       webhooks: [
         orgs.newRepoWebhook('https://app.readthedocs.org/api/v2/webhook/oscat-basic/327898/') {
           content_type: "json",
+          events: ["push"],
           secret: "pass:bots/iot.oscat/readthedocs.org/oscat-basic-webhook-secret",
         },
         orgs.newRepoWebhook('https://app.readthedocs.org/api/v2/webhook/oscat-basic-en/327899/') {
           content_type: "json",
+          events: ["push"],
           secret: "pass:bots/iot.oscat/readthedocs.org/oscat-basic-en-webhook-secret",
         },
       ],
@@ -84,10 +100,12 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
       webhooks: [
         orgs.newRepoWebhook('https://app.readthedocs.org/api/v2/webhook/oscat-network/327905/') {
           content_type: "json",
+          events: ["push"],
           secret: "pass:bots/iot.oscat/readthedocs.org/oscat-network-webhook-secret",
         },
         orgs.newRepoWebhook('https://app.readthedocs.org/api/v2/webhook/oscat-network-en/327904/') {
           content_type: "json",
+          events: ["push"],
           secret: "pass:bots/iot.oscat/readthedocs.org/oscat-network-en-webhook-secret",
         },
       ],
@@ -108,10 +126,12 @@ orgs.newOrg('iot.oscat', 'eclipse-oscat') {
       webhooks: [
         orgs.newRepoWebhook('https://app.readthedocs.org/api/v2/webhook/oscat-building/327902/') {
           content_type: "json",
+          events: ["push"],
           secret: "pass:bots/iot.oscat/readthedocs.org/oscat-building-webhook-secret",
         },
         orgs.newRepoWebhook('https://app.readthedocs.org/api/v2/webhook/oscat-building-en/327903/') {
           content_type: "json",
+          events: ["push"],
           secret: "pass:bots/iot.oscat/readthedocs.org/oscat-building-en-webhook-secret",
         },
       ],
